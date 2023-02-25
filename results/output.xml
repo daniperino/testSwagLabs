@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.6 on win32)" generated="20230225 16:50:06.234" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="c:\DANI\Certi\testSwagLabs\tests\test.robot">
+<kw name="abrir navegador e efetuar login" library="resource" type="SETUP">
+<arg>${login}</arg>
+<arg>${password}</arg>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230225 16:50:06.538" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230225 16:50:06.538" endtime="20230225 16:50:07.736"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230225 16:50:07.737" endtime="20230225 16:50:07.857"/>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230225 16:50:07.857" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<status status="PASS" starttime="20230225 16:50:07.857" endtime="20230225 16:50:08.515"/>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<arg>//h4[contains(.,'Password for all users:')]</arg>
+<arg>Password for all users:</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230225 16:50:08.516" endtime="20230225 16:50:08.581"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>user-name</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:08.583" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20230225 16:50:08.582" endtime="20230225 16:50:08.673"/>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:08.674" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20230225 16:50:08.707" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230225 16:50:08.749" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230225 16:50:08.674" endtime="20230225 16:50:08.750"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:08.750" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20230225 16:50:08.750" endtime="20230225 16:50:08.836"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(//div[@class='inventory_item_desc'])[1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230225 16:50:08.836" endtime="20230225 16:50:08.859"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>${text}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230225 16:50:08.859" endtime="20230225 16:50:08.869"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:06.537" endtime="20230225 16:50:08.869"/>
+</kw>
+<test id="s1-t1" name="Verificar filtro de usuário" line="9">
+<kw name="clicar no filtro" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//select[contains(@class,'container')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:08.871" level="INFO">Clicking element '//select[contains(@class,'container')]'.</msg>
+<status status="PASS" starttime="20230225 16:50:08.870" endtime="20230225 16:50:08.920"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:08.870" endtime="20230225 16:50:08.921"/>
+</kw>
+<kw name="selecionar o filtro de Z to A" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//option[contains(.,'Name (Z to A)')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:08.923" level="INFO">Clicking element '//option[contains(.,'Name (Z to A)')]'.</msg>
+<status status="PASS" starttime="20230225 16:50:08.922" endtime="20230225 16:50:09.015"/>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<arg>(//div[@class='inventory_item_desc'])[1]</arg>
+<arg>${filterZtoA}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230225 16:50:09.016" endtime="20230225 16:50:09.050"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230225 16:50:11.052" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230225 16:50:09.050" endtime="20230225 16:50:11.052"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:08.921" endtime="20230225 16:50:11.052"/>
+</kw>
+<kw name="selecionar o filtro de low to high" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//option[contains(.,'Price (low to high)')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:11.055" level="INFO">Clicking element '//option[contains(.,'Price (low to high)')]'.</msg>
+<status status="PASS" starttime="20230225 16:50:11.054" endtime="20230225 16:50:11.093"/>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<arg>(//div[contains(.,'$7.99')])[11]</arg>
+<arg>$7.99</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230225 16:50:11.093" endtime="20230225 16:50:11.117"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230225 16:50:13.123" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230225 16:50:11.117" endtime="20230225 16:50:13.124"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:11.053" endtime="20230225 16:50:13.125"/>
+</kw>
+<kw name="selecionar o filtro de high to low" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//option[contains(.,'Price (high to low)')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:13.132" level="INFO">Clicking element '//option[contains(.,'Price (high to low)')]'.</msg>
+<status status="PASS" starttime="20230225 16:50:13.130" endtime="20230225 16:50:13.181"/>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<arg>//div[@class='inventory_item_price'][contains(.,'$49.99')]</arg>
+<arg>$49.99</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230225 16:50:13.181" endtime="20230225 16:50:13.203"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230225 16:50:15.220" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230225 16:50:13.203" endtime="20230225 16:50:15.220"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:13.127" endtime="20230225 16:50:15.221"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:08.869" endtime="20230225 16:50:15.222"/>
+</test>
+<test id="s1-t2" name="Comprar produtos" line="15">
+<kw name="clicar no produto Sauce Labs Fleece Jacket" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>add-to-cart-sauce-labs-fleece-jacket</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:15.229" level="INFO">Clicking button 'add-to-cart-sauce-labs-fleece-jacket'.</msg>
+<status status="PASS" starttime="20230225 16:50:15.227" endtime="20230225 16:50:15.284"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:15.226" endtime="20230225 16:50:15.284"/>
+</kw>
+<kw name="clicar no produto Sauce Labs Onesie" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>add-to-cart-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:15.290" level="INFO">Clicking button 'add-to-cart-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20230225 16:50:15.288" endtime="20230225 16:50:15.349"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:15.286" endtime="20230225 16:50:15.350"/>
+</kw>
+<kw name="clicar no produto Sauce Labs Bolt T-Shirt" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>add-to-cart-sauce-labs-bolt-t-shirt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:15.352" level="INFO">Clicking button 'add-to-cart-sauce-labs-bolt-t-shirt'.</msg>
+<status status="PASS" starttime="20230225 16:50:15.350" endtime="20230225 16:50:15.455"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:15.350" endtime="20230225 16:50:15.455"/>
+</kw>
+<kw name="clicar no carrinho" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//a[contains(@class,'link')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:15.459" level="INFO">Clicking element '//a[contains(@class,'link')]'.</msg>
+<status status="PASS" starttime="20230225 16:50:15.457" endtime="20230225 16:50:15.511"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:15.456" endtime="20230225 16:50:15.511"/>
+</kw>
+<kw name="verificar se o produto está no carrinho" library="resource">
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<arg>//div[@class='inventory_item_price'][contains(.,'$49.99')]</arg>
+<arg>$49.99</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230225 16:50:15.512" endtime="20230225 16:50:15.531"/>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<arg>//div[@class='inventory_item_price'][contains(.,'$7.99')]</arg>
+<arg>$7.99</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230225 16:50:15.532" endtime="20230225 16:50:15.550"/>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<arg>//div[@class='inventory_item_price'][contains(.,'$15.99')]</arg>
+<arg>$15.99</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230225 16:50:15.551" endtime="20230225 16:50:15.571"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:15.512" endtime="20230225 16:50:15.571"/>
+</kw>
+<kw name="clicar em checkout" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>checkout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:15.573" level="INFO">Clicking button 'checkout'.</msg>
+<status status="PASS" starttime="20230225 16:50:15.572" endtime="20230225 16:50:15.627"/>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<arg>//span[@class='title']</arg>
+<arg>CHECKOUT: YOUR INFORMATION</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230225 16:50:15.628" endtime="20230225 16:50:15.650"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:15.572" endtime="20230225 16:50:15.650"/>
+</kw>
+<kw name="inserir nome" library="resource">
+<kw name="Input Text" library="Selenium2Library">
+<arg>first-name</arg>
+<arg>Daniella</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:15.654" level="INFO">Typing text 'Daniella' into text field 'first-name'.</msg>
+<status status="PASS" starttime="20230225 16:50:15.651" endtime="20230225 16:50:15.755"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:15.651" endtime="20230225 16:50:15.755"/>
+</kw>
+<kw name="inserir sobrenome" library="resource">
+<kw name="Input Text" library="Selenium2Library">
+<arg>last-name</arg>
+<arg>Perino</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:15.757" level="INFO">Typing text 'Perino' into text field 'last-name'.</msg>
+<status status="PASS" starttime="20230225 16:50:15.757" endtime="20230225 16:50:15.841"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:15.756" endtime="20230225 16:50:15.841"/>
+</kw>
+<kw name="inserir CEP" library="resource">
+<kw name="Input Text" library="Selenium2Library">
+<arg>postal-code</arg>
+<arg>88054600</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:15.843" level="INFO">Typing text '88054600' into text field 'postal-code'.</msg>
+<status status="PASS" starttime="20230225 16:50:15.842" endtime="20230225 16:50:15.943"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:15.842" endtime="20230225 16:50:15.943"/>
+</kw>
+<kw name="clicar em continue" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:15.946" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" starttime="20230225 16:50:15.945" endtime="20230225 16:50:16.011"/>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<arg>//div[@class='summary_info_label'][contains(.,'Payment Information:')]</arg>
+<arg>Payment Information:</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230225 16:50:16.011" endtime="20230225 16:50:16.037"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:15.944" endtime="20230225 16:50:16.037"/>
+</kw>
+<kw name="clicar em finish" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>finish</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230225 16:50:16.039" level="INFO">Clicking button 'finish'.</msg>
+<status status="PASS" starttime="20230225 16:50:16.039" endtime="20230225 16:50:16.094"/>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<arg>//h2</arg>
+<arg>THANK YOU FOR YOUR ORDER</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230225 16:50:16.095" endtime="20230225 16:50:16.117"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:16.038" endtime="20230225 16:50:16.118"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:15.225" endtime="20230225 16:50:16.121"/>
+</test>
+<kw name="fechar navegador" library="resource" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230225 16:50:16.279" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-47.png"&gt;&lt;img src="selenium-screenshot-47.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230225 16:50:16.124" endtime="20230225 16:50:16.280"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230225 16:50:16.280" endtime="20230225 16:50:18.530"/>
+</kw>
+<status status="PASS" starttime="20230225 16:50:16.124" endtime="20230225 16:50:18.530"/>
+</kw>
+<doc>Esse teste faz o login e compras no e-commerce da Swag Labs</doc>
+<status status="PASS" starttime="20230225 16:50:06.240" endtime="20230225 16:50:18.530"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
