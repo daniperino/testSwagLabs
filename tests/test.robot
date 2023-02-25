@@ -1,6 +1,6 @@
 *** Settings ***
-Documentation    Esse teste faz o login e compras no e-commerce da Swag Labs
-Resource         ../resources/resource.robot
+Documentation     Este teste faz login e compras no e-commerce da Swag Labs
+Resource          ../resources/resource.robot
 
 Suite Setup       abrir navegador e efetuar login    ${login}    ${password}
 Suite Teardown    fechar navegador
@@ -11,7 +11,6 @@ Verificar filtro de usuário
     selecionar o filtro de Z to A 
     selecionar o filtro de low to high
     selecionar o filtro de high to low
-
 Comprar produtos
     clicar no produto Sauce Labs Fleece Jacket
     clicar no produto Sauce Labs Onesie  

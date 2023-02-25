@@ -10,8 +10,8 @@ ${password}      secret_sauce
 ${text}          carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.   
 ${filterZtoA}    This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.
 
-*** Keywords ***
 
+*** Keywords ***
 
 abrir navegador e efetuar login
      [Arguments]    ${login}    ${password}
@@ -23,12 +23,10 @@ abrir navegador e efetuar login
     Input Password                    password    ${password}
     Click Button                      login-button
     Wait Until Element Is Visible     (//div[@class='inventory_item_desc'])[1]   
-    Wait Until Page Contains          ${text}
-    
+    Wait Until Page Contains          ${text}    
 fechar navegador
     Capture Page Screenshot
     Close Browser
-
 clicar no filtro
     Click Element    //select[contains(@class,'container')]
 selecionar o filtro de Z to A
@@ -64,7 +62,6 @@ inserir sobrenome
     Input Text    last-name      Perino
 inserir CEP    
     Input Text    postal-code    88054600
-
 clicar em continue
     Click Button    continue
     Wait Until Element Contains    //div[@class='summary_info_label'][contains(.,'Payment Information:')]    Payment Information:
