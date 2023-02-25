@@ -1,9 +1,7 @@
 # Teste automatizado para efetuar compras no e-commerce Swag Labs
 
 ### Para conseguir rodar o teste siga o passo a passo
-    1. Baixe a IDE <a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code!</a>
-    
-    [Visual Studio Code](https://code.visualstudio.com/download)
+    1. Baixe a IDE [Visual Studio Code](https://code.visualstudio.com/download)
     
     2. Dentro do Visual Studio Code, instale as seguintes extensões:
         -Robot Framework Language Server
