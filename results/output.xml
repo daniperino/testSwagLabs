@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.10.6 on win32)" generated="20230225 17:01:05.871" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.1 (Python 3.10.6 on win32)" generated="20230225 17:58:44.450" rpa="false" schemaversion="3">
 <suite id="s1" name="Test" source="c:\DANI\Certi\testSwagLabs\tests\test.robot">
 <kw name="abrir navegador e efetuar login" library="resource" type="SETUP">
 <arg>${login}</arg>
@@ -7,148 +7,148 @@
 <kw name="Open Browser" library="Selenium2Library">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230225 17:01:06.189" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20230225 17:01:06.189" endtime="20230225 17:01:07.383"/>
+<msg timestamp="20230225 17:58:46.956" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230225 17:58:46.956" endtime="20230225 17:58:50.315"/>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230225 17:01:07.383" endtime="20230225 17:01:07.496"/>
+<status status="PASS" starttime="20230225 17:58:50.315" endtime="20230225 17:58:50.447"/>
 </kw>
 <kw name="Go To" library="Selenium2Library">
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230225 17:01:07.498" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
-<status status="PASS" starttime="20230225 17:01:07.497" endtime="20230225 17:01:08.321"/>
+<msg timestamp="20230225 17:58:50.449" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<status status="PASS" starttime="20230225 17:58:50.448" endtime="20230225 17:58:51.695"/>
 </kw>
 <kw name="Wait Until Element Contains" library="Selenium2Library">
 <arg>//h4[contains(.,'Password for all users:')]</arg>
 <arg>Password for all users:</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20230225 17:01:08.322" endtime="20230225 17:01:08.351"/>
+<status status="PASS" starttime="20230225 17:58:51.696" endtime="20230225 17:58:51.742"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>user-name</arg>
 <arg>${login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230225 17:01:08.352" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
-<status status="PASS" starttime="20230225 17:01:08.351" endtime="20230225 17:01:08.482"/>
+<msg timestamp="20230225 17:58:51.743" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20230225 17:58:51.742" endtime="20230225 17:58:51.825"/>
 </kw>
 <kw name="Input Password" library="Selenium2Library">
 <arg>password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230225 17:01:08.483" level="INFO">Typing password into text field 'password'.</msg>
-<msg timestamp="20230225 17:01:08.512" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230225 17:01:08.552" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230225 17:01:08.482" endtime="20230225 17:01:08.552"/>
+<msg timestamp="20230225 17:58:51.826" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20230225 17:58:51.861" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230225 17:58:51.914" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230225 17:58:51.825" endtime="20230225 17:58:51.914"/>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <arg>login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230225 17:01:08.553" level="INFO">Clicking button 'login-button'.</msg>
-<status status="PASS" starttime="20230225 17:01:08.553" endtime="20230225 17:01:08.637"/>
+<msg timestamp="20230225 17:58:51.915" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20230225 17:58:51.915" endtime="20230225 17:58:52.160"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>(//div[@class='inventory_item_desc'])[1]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230225 17:01:08.637" endtime="20230225 17:01:08.665"/>
+<status status="PASS" starttime="20230225 17:58:52.160" endtime="20230225 17:58:52.520"/>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <arg>${text}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20230225 17:01:08.665" endtime="20230225 17:01:08.679"/>
+<status status="PASS" starttime="20230225 17:58:52.521" endtime="20230225 17:58:52.544"/>
 </kw>
-<status status="PASS" starttime="20230225 17:01:06.188" endtime="20230225 17:01:08.679"/>
+<status status="PASS" starttime="20230225 17:58:46.954" endtime="20230225 17:58:52.545"/>
 </kw>
 <test id="s1-t1" name="Verificar filtro de usuário" line="9">
 <kw name="clicar no filtro" library="resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//select[contains(@class,'container')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230225 17:01:08.682" level="INFO">Clicking element '//select[contains(@class,'container')]'.</msg>
-<status status="PASS" starttime="20230225 17:01:08.681" endtime="20230225 17:01:08.758"/>
+<msg timestamp="20230225 17:58:52.566" level="INFO">Clicking element '//select[contains(@class,'container')]'.</msg>
+<status status="PASS" starttime="20230225 17:58:52.565" endtime="20230225 17:58:52.713"/>
 </kw>
-<status status="PASS" starttime="20230225 17:01:08.680" endtime="20230225 17:01:08.758"/>
+<status status="PASS" starttime="20230225 17:58:52.564" endtime="20230225 17:58:52.714"/>
 </kw>
 <kw name="selecionar o filtro de Z to A" library="resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//option[contains(.,'Name (Z to A)')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230225 17:01:08.761" level="INFO">Clicking element '//option[contains(.,'Name (Z to A)')]'.</msg>
-<status status="PASS" starttime="20230225 17:01:08.760" endtime="20230225 17:01:08.854"/>
+<msg timestamp="20230225 17:58:52.721" level="INFO">Clicking element '//option[contains(.,'Name (Z to A)')]'.</msg>
+<status status="PASS" starttime="20230225 17:58:52.719" endtime="20230225 17:58:52.828"/>
 </kw>
 <kw name="Wait Until Element Contains" library="Selenium2Library">
 <arg>(//div[@class='inventory_item_desc'])[1]</arg>
 <arg>${filterZtoA}</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20230225 17:01:08.854" endtime="20230225 17:01:08.871"/>
+<status status="PASS" starttime="20230225 17:58:52.829" endtime="20230225 17:58:52.845"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230225 17:01:10.884" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230225 17:01:08.872" endtime="20230225 17:01:10.885"/>
+<msg timestamp="20230225 17:58:54.860" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230225 17:58:52.845" endtime="20230225 17:58:54.861"/>
 </kw>
-<status status="PASS" starttime="20230225 17:01:08.759" endtime="20230225 17:01:10.885"/>
+<status status="PASS" starttime="20230225 17:58:52.716" endtime="20230225 17:58:54.862"/>
 </kw>
 <kw name="selecionar o filtro de low to high" library="resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//option[contains(.,'Price (low to high)')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230225 17:01:10.891" level="INFO">Clicking element '//option[contains(.,'Price (low to high)')]'.</msg>
-<status status="PASS" starttime="20230225 17:01:10.889" endtime="20230225 17:01:10.944"/>
+<msg timestamp="20230225 17:58:54.870" level="INFO">Clicking element '//option[contains(.,'Price (low to high)')]'.</msg>
+<status status="PASS" starttime="20230225 17:58:54.868" endtime="20230225 17:58:54.913"/>
 </kw>
 <kw name="Wait Until Element Contains" library="Selenium2Library">
 <arg>(//div[contains(.,'$7.99')])[11]</arg>
 <arg>$7.99</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20230225 17:01:10.945" endtime="20230225 17:01:10.968"/>
+<status status="PASS" starttime="20230225 17:58:54.914" endtime="20230225 17:58:54.940"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230225 17:01:12.971" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230225 17:01:10.968" endtime="20230225 17:01:12.971"/>
+<msg timestamp="20230225 17:58:56.949" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230225 17:58:54.940" endtime="20230225 17:58:56.950"/>
 </kw>
-<status status="PASS" starttime="20230225 17:01:10.887" endtime="20230225 17:01:12.971"/>
+<status status="PASS" starttime="20230225 17:58:54.865" endtime="20230225 17:58:56.951"/>
 </kw>
 <kw name="selecionar o filtro de high to low" library="resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//option[contains(.,'Price (high to low)')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230225 17:01:12.975" level="INFO">Clicking element '//option[contains(.,'Price (high to low)')]'.</msg>
-<status status="PASS" starttime="20230225 17:01:12.974" endtime="20230225 17:01:13.016"/>
+<msg timestamp="20230225 17:58:56.959" level="INFO">Clicking element '//option[contains(.,'Price (high to low)')]'.</msg>
+<status status="PASS" starttime="20230225 17:58:56.956" endtime="20230225 17:58:57.007"/>
 </kw>
 <kw name="Wait Until Element Contains" library="Selenium2Library">
 <arg>//div[@class='inventory_item_price'][contains(.,'$49.99')]</arg>
 <arg>$49.99</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20230225 17:01:13.016" endtime="20230225 17:01:13.039"/>
+<status status="PASS" starttime="20230225 17:58:57.007" endtime="20230225 17:58:57.032"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230225 17:01:15.048" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230225 17:01:13.039" endtime="20230225 17:01:15.048"/>
+<msg timestamp="20230225 17:58:59.045" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230225 17:58:57.033" endtime="20230225 17:58:59.045"/>
 </kw>
-<status status="PASS" starttime="20230225 17:01:12.973" endtime="20230225 17:01:15.048"/>
+<status status="PASS" starttime="20230225 17:58:56.954" endtime="20230225 17:58:59.046"/>
 </kw>
-<status status="PASS" starttime="20230225 17:01:08.679" endtime="20230225 17:01:15.049"/>
+<status status="PASS" starttime="20230225 17:58:52.545" endtime="20230225 17:58:59.046"/>
 </test>
 <kw name="fechar navegador" library="resource" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20230225 17:01:15.238" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20230225 17:01:15.052" endtime="20230225 17:01:15.239"/>
+<msg timestamp="20230225 17:58:59.240" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230225 17:58:59.053" endtime="20230225 17:58:59.240"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230225 17:01:15.239" endtime="20230225 17:01:17.422"/>
+<status status="PASS" starttime="20230225 17:58:59.241" endtime="20230225 17:59:01.645"/>
 </kw>
-<status status="PASS" starttime="20230225 17:01:15.051" endtime="20230225 17:01:17.423"/>
+<status status="PASS" starttime="20230225 17:58:59.050" endtime="20230225 17:59:01.646"/>
 </kw>
 <doc>Este teste faz login e compras no e-commerce da Swag Labs</doc>
-<status status="PASS" starttime="20230225 17:01:05.877" endtime="20230225 17:01:17.424"/>
+<status status="PASS" starttime="20230225 17:58:44.465" endtime="20230225 17:59:01.647"/>
 </suite>
 <statistics>
 <total>
