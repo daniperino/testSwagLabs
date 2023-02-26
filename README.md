@@ -1,5 +1,9 @@
 # Teste automatizado utilizando Robot Framework para efetuar compras no e-commerce Swag Labs
 
+**Website** -   https://www.saucedemo.com/
+**User** -      standard_user
+**password**-   secret_sauce
+
 ### Para conseguir rodar o teste siga o passo a passo
 1. Baixe a IDE [Visual Studio Code](https://code.visualstudio.com/download)
     
