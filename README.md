@@ -23,7 +23,7 @@
     
 6. Baixe o projeto do gitHub
     
-7. No Visual Studio Code clique em **Teste** no menu lateral com o ícone de uma ampulheta e clique na setinha ao lado o teste **test.robot**. Os testes serão executados por inteiro 
+7. No Visual Studio Code clique em **Teste** no menu lateral com o ícone de uma ampulheta e clique na setinha ao lado do teste **test.robot**. Os testes serão executados por inteiro 
     
     ### **OU**
     
