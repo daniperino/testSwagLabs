@@ -18,6 +18,8 @@
     - robot --version (para verificar se instalou)
     
 4. Instale o python seguindo o passo a passo deste [link](https://dicasdepython.com.br/como-instalar-o-python-no-windows-10/#:~:text=No%20prompt%20de%20comando%20digite,j%C3%A1%20pode%20executar%20comandos%20python.)
+
+    Na instalação clicar para adicionar na variavel de ambiente
     
 5. Baixe o [chrome driver](https://chromedriver.chromium.org/downloads) seguindo este passo a passo [link](https://www.youtube.com/watch?v=Ot10qzrb13c)
     
